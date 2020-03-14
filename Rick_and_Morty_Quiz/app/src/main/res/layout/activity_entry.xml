@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout android:id="@+id/containerEntry"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewEntry"
+            android:layout_below="@id/containerEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="current_character"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/imageViewEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name loading..."
+            android:textSize="25dp"/>
+
+        <!-- <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status loading..."
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/textViewSpecies"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Species loading..."
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/textViewType"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewSpecies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type loading..."
+            android:textSize="25dp"/>
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender loading..."
+            android:textSize="25dp"/> -->
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Result" />
+
+        <Button
+            android:id="@+id/buttonRandom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Random Character" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_below="@id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
